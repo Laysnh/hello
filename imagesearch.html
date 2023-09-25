@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Image Search</title>
+    <style>
+        a{
+            margin: 15px;
+            position: fixed;
+            text-decoration: none;
+            word-spacing: .2px;
+            font-size: 15px;
+            margin-left: -100px;   
+        }
+        
+        .google{
+            display: grid; 
+            place-items: center;
+            min-height: 100px;
+            width: 100%;   
+        }
+        img{
+            place-items: center;
+            margin-top: 10%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    
+        span{
+            display: inline-block;
+            position: relative;
+            color:#4285f4;
+            margin-top: -15px ;
+            padding-bottom: 1%;
+            left: 105px;
+            font: 1em arial, sans-serif;
+            
+        }
+        input{
+            position: fixed;
+            border-radius: 20px;
+            width: 60%;
+            height: 30px;
+            margin-top: 20px;
+            margin-left: 20%;
+            
+        }  
+        #g{
+            color: #4285f4;
+        }
+        #o{
+            color: rgb(241, 95, 16);
+        }
+        #oo{
+            color: rgb(247, 195, 37);
+        }
+        #l{
+            color: rgb(91, 158, 25);
+        }
+        #s{
+            color: #4285f4;
+        }
+        form.search {
+            border: none;
+            padding: 0;
+          }
+          
+        input[type=text] {
+            border: 1px solid #afa7a7;
+            width: 50%;
+            padding: 5px 4px 5px 40px;
+            background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+          }
+
+    </style>
+</head>
+<body>
+    <a href="./index.html"><span id="g">G</span><span id="o">o</span><span id="oo">o</span><span id="g">g</span><span id="l">l</span><span id="o">e</span> <span id="s">Search</span></a>
+    <div class="google">
+        <img src="./image/googlelogo_color_272x92dp.png" alt="googleimage">
+        <span>Images</span>
+    </div>
+    
+    <form class="search" action="https://images.google.com/">
+        <input type="text"  type="submit" name="q">
+    </form>
+</body>
+</html>

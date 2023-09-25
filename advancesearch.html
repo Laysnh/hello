@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Advanced Search</title>
+    <style>
+        
+        
+        a{
+            text-decoration: none;
+        }
+        #g{
+            color: #4285f4;
+        }
+        #o{
+            color: rgb(241, 95, 16);
+        }
+        #oo{
+            color: rgb(247, 195, 37);
+        }
+        #l{
+            color: rgb(91, 158, 25);
+        }
+        #s{
+            color: #4285f4;
+        }
+        h1{
+            color: #d93025;
+            font-family: Arial, sans-serif;
+            font-size: 20px; 
+            margin: 25px 35px;
+        }
+        .tirer{
+            border-bottom: 1px solid #ebebeb;
+        }
+
+        form.findwords {
+          display: table;
+        }
+        
+        div.findwords {
+          display: table-row;
+        }
+        
+        label,
+        input {
+          display: table-cell;
+          margin-bottom: 10px;
+          width: 200px;
+          margin-left: 5px;
+          padding-left: 10px;
+        }
+        
+        label {
+          padding-right: -10px;
+        }
+        .findwords [type=submit]{
+          margin-top: 5px;
+          width: 150px;
+          height: 35px;
+          border-radius: 2px;
+          margin-left: 133%;
+          cursor: pointer;
+          
+      
+        }
+        .findwords input[value]:hover {
+          background-color:#3079ed;
+          ;
+        }
+
+        .findwords input[value]{
+          font: 1em sans-serif;
+          font-size: smaller;
+          background-color: #4285f4;
+          border-color: #4285f4;
+          color: white;
+        }
+        
+       
+        
+    </style>
+</head>
+<body>
+    
+    <section>
+        <a href="./index.html"><span id="g">G</span><span id="o">o</span><span id="oo">o</span><span id="g">g</span><span id="l">l</span><span id="o">e</span> <span id="s">Search</span></a>
+        <h1>Advanced Search</h1>
+        <div class="tirer"></div>
+    </section>
+
+    <h3>Find pages with...</h3>
+      <form action="" method="get" class="findwords">
+        <div class="findwords">
+          <label for="allwords">All these words: </label>
+          <input type="text" name="allwords" id="allwords" required />
+        </div>
+        <div class="findwords">
+          <label for="thisword">This exact word or phrase: </label>
+          <input type="text" name="thisword" id="thisword" required />
+        </div>
+        <div class="findwords">
+          <label for="anyword">Any of these words: </label>
+          <input type="text" name="anyword" id="anyword" required />
+        </div>
+        <div class="findwords">
+          <label for="noneword">None of these words: </label>
+          <input type="text" name="noneword" id="noneword" required />
+        </div>
+        <div class="findwords">
+          <input type="submit" value="Advance Search" />
+        </div>
+      </form>
+    
+</body>
+</html>

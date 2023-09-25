@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+             
+            list-style-type: none;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            word-spacing: -.5px;
+            
+          }
+          
+        .nav li {
+            display: inline-block;
+            font-size: 15px;
+            padding: 20px;
+            
+          }
+        .out{
+            list-style-type: none;
+            text-align: center;
+            word-spacing: 20px;
+    
+        } 
+        .out li{
+            display: inline-block;
+            font-size: 20px;
+            padding: 15px;
+        }
+        a{
+            text-decoration: none;
+        }
+        #g{
+            color: #4285f4;
+        }
+        #o{
+            color: rgb(241, 95, 16);
+        }
+        #oo{
+            color: rgb(247, 195, 37);
+        }
+        #l{
+            color: rgb(91, 158, 25);
+        }
+        #s{
+            color: #4285f4;
+        }
+        #up{
+            display: grid; 
+            place-items: center;
+            min-height: 100px;
+            width: 100%;
+            
+        }
+        img{
+            place-items: center;
+            margin-top: 5%;
+            margin-left: auto;
+            margin-right: auto;
+            
+        
+        }
+        
+        #off {
+            border-radius: 20px;
+            width: 420px;
+            height: 30px;
+            margin-top: 20px;
+        }
+
+        #none[type=submit]{
+            display:block;
+            margin-top: 0;
+            margin-left: -20px;  
+            background-color: rgb(250, 250, 250);
+            cursor: pointer;
+        }
+        #none[value]{
+            border-color: whitesmoke;
+            height: 40px;
+            width: 60;
+            color: rgb(77, 82, 87);
+            padding: 0px 20px 0px 20px;
+            border-radius: 4px;
+        }
+        #none[value]:hover{
+            border-color: rgb(210, 215, 226)
+        }
+        input[type=text] {
+            border: 1px solid #afa7a7;
+            width: 50%;
+            padding: 5px 4px 5px 40px;
+            background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+          }
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li>
+            <a href="./imagesearch.html"><span id="g">G</span><span id="o">o</span><span id="oo">o</span><span id="g">g</span><span id="l">l</span><span id="o">e</span> <span id="s">Image</span></a>
+        </li>
+        <li>
+            <a href="./advancesearch.html"><span id="g">G</span><span id="o">o</span><span id="oo">o</span><span id="g">g</span><span id="l">l</span><span id="o">e</span> <span id="s">Advance</span></a>
+        </li>
+    </ul>
+    <div id="up">
+        <img src="./image/googlelogo_color_272x92dp.png" alt="google" >
+        <form action="https://www.google.com/search">
+            <input id="off" type="text" name="q">
+            <div class="out">
+                <ul>
+                    <li>
+                        <input id="none" type="submit" value="Google Search">
+                    </li>
+                    <li>
+                        <input id="none" type="submit" value="I’m Feeling Lucky">
+                    </li>
+                </ul>
+            </div>
+           </form>
+    </div>
+    
+</body>
+</html>

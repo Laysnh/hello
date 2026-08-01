@@ -1,20 +1,57 @@
-Specification
+# Plateforme numérique du BNGRC
 
-Your website must meet the following requirements:
+Fondations frontend de la future plateforme numérique du Bureau National de Gestion des Risques et des Catastrophes. Cette première étape livre uniquement la connexion de démonstration, un tableau de bord provisoire et le socle des futures fonctionnalités.
 
-    Your website should have at least three pages: one for regular Google Search (which must be called index.html), one for Google Image Search, and one for Google Advanced Search.
-        On the Google Search page, there should be links in the upper-right of the page to go to Image Search or Advanced Search. On each of the other two pages, there should be a link in the upper-right to go back to Google Search.
-    On the Google Search page, the user should be able to type in a query, click “Google Search”, and be taken to the Google search results for that page.
-        Like Google’s own, your search bar should be centered with rounded corners. The search button should also be centered, and should be beneath the search bar.
-    On the Google Image Search page, the user should be able to type in a query, click a search button, and be taken to the Google Image search results for that page.
-    On the Google Advanced Search page, the user should be able to provide input for the following four fields (taken from Google’s own advanced search options)
-        Find pages with… “all these words:”
-        Find pages with… “this exact word or phrase:”
-        Find pages with… “any of these words:”
-        Find pages with… “none of these words:”
-    Like Google’s own Advanced Search page, the four options should be stacked vertically, and all of the text fields should be left aligned.
-        Consistent with Google’s own CSS, the “Advanced Search” button should be blue with white text.
-        When the “Advanced Search” button is clicked, the user should be taken to the search results page for their given query.
-    Add an “I’m Feeling Lucky” button to the main Google Search page. Consistent with Google’s own behavior, clicking this link should take users directly to the first Google search result for the query, bypassing the normal results page.
-        You may encounter a redirect notice when using the “I’m Feeling Lucky” button. Not to worry! This is an expected consequence of a security feature implemented by Google.
-    The CSS you write should resemble Google’s own aesthetics.
+> **Démonstration uniquement :** toutes les informations affichées sont fictives. Aucun backend, aucune base de données et aucune authentification réelle ne sont utilisés.
+
+## Stack
+
+React, TypeScript, Vite, Material UI et Material Icons, React Router, React Hook Form, TanStack Query, Chart.js, Leaflet, FullCalendar, Framer Motion et date-fns.
+
+## Installation et lancement
+
+Prérequis : Node.js 20.19+ (ou 22.12+) et npm.
+
+```bash
+npm install
+npm run dev
+```
+
+Ouvrez ensuite `http://localhost:5173`.
+
+## Identifiants de démonstration
+
+Utilisez n'importe quelle direction ou nom d'utilisateur non vide et un mot de passe d'au moins quatre caractères. Exemple : `BNGRC Demo` / `demo`.
+
+## Qualité et build
+
+```bash
+npm run lint
+npm run build
+npm run preview
+```
+
+## Déploiement Vercel
+
+Importez le dépôt dans Vercel en conservant le preset Vite. La commande de build est `npm run build` et le dossier de sortie `dist`. `vercel.json` redirige les routes de la SPA vers `index.html`, permettant notamment le rechargement direct de `/dashboard`.
+
+## Structure principale
+
+```text
+src/
+├── app/           # Composition et providers globaux
+├── components/    # Fondations UI communes
+├── config/        # Configuration applicative
+├── features/      # Modules fonctionnels évolutifs
+├── hooks/         # Hooks partagés
+├── layouts/       # Mises en page
+├── mock/          # Données fictives
+├── pages/         # Pages routées
+├── routes/        # Définition des routes
+├── services/      # Futurs adaptateurs de services
+├── theme/         # Design system BNGRC
+├── types/         # Types partagés
+└── utils/         # Utilitaires
+```
+
+Les modules métier (réunions, personnels, alertes, projets, stock et rapports) ne sont pas implémentés à cette étape.
